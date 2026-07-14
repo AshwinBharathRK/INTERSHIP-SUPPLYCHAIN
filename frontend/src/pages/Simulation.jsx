@@ -117,9 +117,13 @@ export default function Simulation() {
   }, [engine, isRunning, simSpeed]);
 
   // Derived real-time datasets
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const visualData = useMemo(() => engine?.getVisualData(), [engine, ticks]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const kpis = useMemo(() => engine?.getKPIs(), [engine, ticks]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const aiAlerts = useMemo(() => engine?.getAIAlerts(), [engine, ticks]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const historyLogs = useMemo(() => engine?.alerts || [], [engine, ticks]);
 
   // Sync selected node with real-time updates
@@ -134,6 +138,7 @@ export default function Simulation() {
     return Array.from(engine.inventory.values()).filter(
       (item) => item.warehouse_code === inspectedNode.code
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inspectedNode, engine, ticks]);
 
   // Handler to load built-in scenarios
