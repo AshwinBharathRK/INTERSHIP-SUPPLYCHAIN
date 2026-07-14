@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 30% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  /* Brand - Saturated Light Neon Aurora default */
+  --primary: 195 100% 43%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 25% 95%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 215 25% 97%;
+  --muted-foreground: 215 16% 45%;
+  --accent: 260 90% 60%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 355 90% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 20% 90%;
+  --input: 215 20% 90%;
+  --ring: 195 100% 43%;
+  --radius: 0.9rem;
+
+  --success: 145 80% 45%;
+  --warning: 35 95% 55%;
+  --critical: 355 90% 58%;
+  --info: 205 95% 50%;
+
+  --surface-0: 210 30% 98%;
+  --surface-1: 0 0% 100%;
+  --surface-2: 210 20% 95%;
+  --stroke-soft: 215 20% 91%;
+  --stroke-strong: 215 20% 80%;
+
+  --glass-bg: 0 0% 100%;
+
+  --aurora-a: 195 100% 48%;
+  --aurora-b: 260 90% 60%;
+  --aurora-c: 145 80% 45%;
+  --aurora-d: 35 95% 55%;
+
+  --chart-1: 195 100% 43%;
+  --chart-2: 145 80% 45%;
+  --chart-3: 35 95% 55%;
+  --chart-4: 260 90% 60%;
+  --chart-5: 215 16% 45%;
+
+  --motion-fast: 150ms;
+  --motion-normal: 250ms;
+  --motion-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  --shadow-1: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-2: 0 18px 60px rgba(15, 23, 42, 0.12);
+  --glow-cyan: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 0 30px rgba(34, 211, 238, 0.08);
+}
+
+/* CYBERPUNK DUSK THEME */
+.theme-cyberpunk {
+  --background: 290 30% 97%;
+  --foreground: 280 50% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 280 50% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 280 50% 15%;
+  --primary: 325 100% 55%; /* Neon Magenta */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 285 20% 93%;
+  --secondary-foreground: 280 50% 15%;
+  --muted: 285 20% 95%;
+  --muted-foreground: 280 15% 50%;
+  --accent: 195 100% 43%; /* Electric Cyan */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 355 90% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 285 20% 88%;
+  --input: 285 20% 88%;
+  --ring: 325 100% 55%;
+  --success: 160 80% 45%;
+  --warning: 30 95% 50%;
+  --critical: 355 90% 58%;
+  --info: 195 100% 43%;
+  --surface-0: 290 30% 97%;
+  --surface-1: 0 0% 100%;
+  --surface-2: 290 20% 94%;
+  --stroke-soft: 290 20% 90%;
+  --stroke-strong: 290 20% 80%;
+  --glass-bg: 0 0% 100%;
+  --aurora-a: 325 100% 55%;
+  --aurora-b: 270 90% 55%;
+  --aurora-c: 195 100% 43%;
+  --aurora-d: 25 95% 55%;
+  --chart-1: 325 100% 55%;
+  --chart-2: 160 80% 45%;
+  --chart-3: 30 95% 50%;
+  --chart-4: 195 100% 43%;
+  --chart-5: 280 15% 50%;
+  --glow-cyan: 0 0 0 1px rgba(244, 63, 185, 0.15), 0 0 30px rgba(244, 63, 185, 0.08);
+}
+
+/* EMERALD MATRIX THEME */
+.theme-matrix {
+  --background: 140 25% 97%;
+  --foreground: 150 50% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 150 50% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 150 50% 12%;
+  --primary: 142 76% 36%; /* Matrix Green */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 140 15% 93%;
+  --secondary-foreground: 150 50% 12%;
+  --muted: 140 15% 95%;
+  --muted-foreground: 145 10% 50%;
+  --accent: 190 90% 40%; /* Deep Teal */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 360 85% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 140 15% 88%;
+  --input: 140 15% 88%;
+  --ring: 142 76% 36%;
+  --success: 142 76% 36%;
+  --warning: 45 95% 50%;
+  --critical: 360 85% 55%;
+  --info: 190 90% 40%;
+  --surface-0: 140 25% 97%;
+  --surface-1: 0 0% 100%;
+  --surface-2: 140 15% 94%;
+  --stroke-soft: 140 15% 90%;
+  --stroke-strong: 140 15% 80%;
+  --glass-bg: 0 0% 100%;
+  --aurora-a: 142 76% 36%;
+  --aurora-b: 160 80% 40%;
+  --aurora-c: 190 90% 40%;
+  --aurora-d: 45 95% 50%;
+  --chart-1: 142 76% 36%;
+  --chart-2: 145 95% 45%;
+  --chart-3: 45 95% 50%;
+  --chart-4: 190 90% 40%;
+  --chart-5: 145 10% 50%;
+  --glow-cyan: 0 0 0 1px rgba(34, 197, 94, 0.15), 0 0 30px rgba(34, 197, 94, 0.08);
+}
+
+/* SOLAR FLARE THEME */
+.theme-solar {
+  --background: 25 35% 98%;
+  --foreground: 20 50% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 50% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 50% 15%;
+  --primary: 18 95% 50%; /* Vibrant Orange */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 25 20% 94%;
+  --secondary-foreground: 20 50% 15%;
+  --muted: 25 20% 96%;
+  --muted-foreground: 25 15% 52%;
+  --accent: 40 95% 45%; /* Amber Yellow */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 85% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 25 20% 89%;
+  --input: 25 20% 89%;
+  --ring: 18 95% 50%;
+  --success: 145 75% 45%;
+  --warning: 32 95% 50%;
+  --critical: 0 85% 55%;
+  --info: 40 95% 45%;
+  --surface-0: 25 35% 98%;
+  --surface-1: 0 0% 100%;
+  --surface-2: 25 20% 94%;
+  --stroke-soft: 25 20% 90%;
+  --stroke-strong: 25 20% 80%;
+  --glass-bg: 0 0% 100%;
+  --aurora-a: 18 95% 50%;
+  --aurora-b: 32 95% 50%;
+  --aurora-c: 145 75% 45%;
+  --aurora-d: 0 85% 55%;
+  --chart-1: 18 95% 50%;
+  --chart-2: 145 75% 45%;
+  --chart-3: 32 95% 50%;
+  --chart-4: 40 95% 45%;
+  --chart-5: 25 15% 52%;
+  --glow-cyan: 0 0 0 1px rgba(249, 115, 22, 0.15), 0 0 30px rgba(249, 115, 22, 0.08);
+}
+
+
+/* Keyframe animations for drift & glow */
+@keyframes aurora-drift {
+  0% {
+    transform: rotate(0deg) scale(1) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2) translate(50px, -30px);
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translate(0px, 0px);
+  }
+}
+
+@keyframes neon-border-pulse {
+  0%, 100% {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 8px hsl(var(--primary) / 0.1);
+  }
+  50% {
+    border-color: hsl(var(--primary) / 0.85);
+    box-shadow: 0 0 16px hsl(var(--primary) / 0.25);
+  }
+}
+
+/* Vibrant state hover glows */
+.hover-glow-card {
+  transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+.hover-glow-card:hover {
+  transform: translateY(-2px);
+  border-color: hsl(var(--primary) / 0.65) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 0 20px hsl(var(--primary) / 0.1);
+}
+
+.hover-glow-success:hover {
+  border-color: hsl(var(--success) / 0.65) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 0 20px hsl(var(--success) / 0.1);
+}
+
+.hover-glow-warning:hover {
+  border-color: hsl(var(--warning) / 0.65) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 0 20px hsl(var(--warning) / 0.1);
+}
+
+.hover-glow-critical:hover {
+  border-color: hsl(var(--critical) / 0.65) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 0 20px hsl(var(--critical) / 0.1);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  z-index: 50;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glass panel recipe (position left to utility classes) */
+.glass-panel {
+  border-radius: var(--radius);
+  background: hsl(var(--glass-bg) / 0.55);
+  border: 1px solid hsl(var(--stroke-soft) / 0.55);
+  box-shadow: var(--shadow-1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel-solid {
+  border-radius: var(--radius);
+  background: hsl(var(--surface-1));
+  border: 1px solid hsl(var(--stroke-soft) / 0.7);
+  box-shadow: var(--shadow-1);
+}
+
+.rim-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(1200px circle at 20% 0%, rgba(34, 211, 238, 0.1), transparent 55%);
+}
+
+/* Aurora band */
+.aurora-band {
+  pointer-events: none;
+  position: absolute;
+  top: -6rem;
+  left: -20%;
+  height: 320px;
+  width: 140%;
+  opacity: 0.55;
+  filter: blur(40px);
+  background: radial-gradient(900px circle at 20% 20%, hsl(var(--aurora-a) / 0.22), transparent 55%),
+    radial-gradient(700px circle at 55% 10%, hsl(var(--aurora-b) / 0.18), transparent 60%),
+    radial-gradient(800px circle at 85% 35%, hsl(var(--aurora-c) / 0.16), transparent 60%),
+    radial-gradient(700px circle at 70% 70%, hsl(var(--aurora-d) / 0.10), transparent 65%);
+  animation: aurora-drift 28s ease-in-out infinite alternate;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--stroke-soft));
+  border-radius: 8px;
+  border: 2px solid hsl(var(--background));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--stroke-strong));
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(90deg, hsl(var(--surface-2)) 25%, hsl(var(--stroke-soft)) 50%, hsl(var(--surface-2)) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* Live pulse dot */
+@keyframes livepulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+.live-dot {
+  animation: livepulse 2s ease-in-out infinite;
+}
+
+/* Map overrides */
+.maplibregl-ctrl-attrib {
+  background: hsl(var(--surface-1) / 0.7) !important;
+  color: hsl(var(--muted-foreground)) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Focus */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.7);
+}
